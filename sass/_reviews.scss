@@ -8,7 +8,7 @@
   &__card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     padding: 3rem;
@@ -17,6 +17,18 @@
     &--quote {
       width: 6.4rem;
       height: 6.4rem;
+      margin-bottom: 1rem;
+    }
+
+    &--review {
+      margin-bottom: auto;
+    }
+
+    &--author {
+      margin-top: 1rem;
+      font-weight: 100;
+      font-family: $font-secondary;
+      font-size: 1.6rem;
     }
   }
 }
