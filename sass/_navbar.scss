@@ -1,0 +1,34 @@
+.navbar {
+  display: flex;
+  height: 100%;
+  padding: 1rem;
+  align-items: stretch;
+
+  font-size: 1.7rem;
+  color: $font-color-primary;
+  background-color: $color-primary;
+  box-shadow: $box-shadow-light;
+
+  grid-row: navbar-start / navbar-end;
+
+  &__logo {
+    margin-right: auto;
+    align-self: center;
+    font-size: 2.5rem;
+    cursor: default;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+
+    transition: all 0.2s;
+
+    &:hover {
+      color: $font-color-secondary;
+      background-color: $color-secondary;
+    }
+  }
+}
