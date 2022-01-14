@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 15rem;
+
+  margin: 0;
+  padding: 0 $body-margin-horizontal;
+
+  background-color: #fff;
+
+  &__social-medias {
+    width: 20rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
