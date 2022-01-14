@@ -85,7 +85,42 @@
         <p class="reviews__card--author">Ariel & Sammie</p>
       </div>
     </section>
-    <section id="contact" class="contact"></section>
+    <section id="contact" class="contact">
+      <div class="contact__location">
+        <h2 class="h2">Contact</h2>
+        <p>100 Pearse St., Dublin, D50 A1Y2</p>
+        <p>contact@weddinner.ie</p>
+        <p>01 234 5678</p>
+      </div>
+      <form class="contact__form">
+        
+        <div class="form__group">
+          <input id="name" type="text" placeholder="Enter your name" class="input contact__form--input" maxlength="50" required>
+          <label for="name" class="label">Name</label>
+        </div>
+        <div class="form__group">
+          <input id="email" type="email" placeholder="Enter your email" class="input contact__form--input" maxlength="50" required>
+          <label for="email" class="label">Email</label>
+        </div>
+        <div class="form__group">
+          <input id="phone" type="tel" placeholder="Enter your phone number" class="input contact__form--input" maxlength="20">
+          <label for="phone" class="label">Phone</label>
+        </div>
+        <div class="form__group">
+          <input id="address" type="text" placeholder="Enter your address" class="input contact__form--input" maxlength="50">
+          <label for="address" class="label">Address</label>
+        </div>
+        <div class="form__group contact__form--subject">
+          <input id="subject" type="text" placeholder="Type the subject" class="input contact__form--input" maxlength="50" required>
+          <label for="subject" class="label">Subject</label>
+        </div>
+        <div class="form__group contact__form--message">
+          <textarea id="message" type="text" placeholder="Type your message here..." class="textarea contact__form--textarea" maxlength="1000" required ></textarea>
+          <label for="message" class="label">Message</label>
+        </div>
+        <button type="submit" class="btn contact__form--submit">Submit</button>
+      </form>
+    </section>
     <footer class="footer"></footer>
 </body>
 </html>

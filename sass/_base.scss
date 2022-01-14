@@ -1,6 +1,8 @@
 // COLOR VARIABLES
 $color-primary: #efece2;
 $color-secondary: #181818;
+$color-tertiary: #459fed;
+$color-error: #ff4040;
 
 $font-color-primary: #111;
 $font-color-secondary: #fafafa;
@@ -9,6 +11,8 @@ $box-shadow-light-center: 0 0 2.4rem 0.3rem #000;
 
 $box-shadow-light: 0 1.1rem 2rem rgba(0, 0, 0, 0.15);
 $box-shadow-mid: 0 1.3rem 3rem rgba(0, 0, 0, 0.3);
+
+$default-transition-duration: 0.2s;
 
 // FONT VARIABLES
 $font-primary: "Spectral", serif;

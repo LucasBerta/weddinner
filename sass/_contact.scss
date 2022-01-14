@@ -1,0 +1,42 @@
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: start;
+  padding: 4rem;
+  gap: 4rem;
+
+  &__location {
+    text-align: center;
+    > *:not(:first-child) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 0.5rem;
+    padding: 0 15rem;
+    width: 100%;
+
+    &--input,
+    &--textarea {
+      margin-top: 1.5rem;
+    }
+
+    &--subject {
+      grid-column: 1 / -1;
+    }
+
+    &--message {
+      grid-column: 1 / -1;
+    }
+
+    &--submit {
+      background-color: $font-color-primary;
+      color: $font-color-secondary;
+      grid-column: 1 / -1;
+    }
+  }
+}
