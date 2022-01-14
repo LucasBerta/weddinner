@@ -1,4 +1,5 @@
 $navbar-height: 6rem;
+$body-margin-horizontal: 1.5rem;
 
 .root-container {
   display: grid;
@@ -15,6 +16,9 @@ $navbar-height: 6rem;
   grid-template-columns: 1fr;
 
   overflow-x: hidden;
-  padding: 0 1.5rem;
   background-color: $color-primary;
+
+  > * {
+    margin: 0 $body-margin-horizontal;
+  }
 }
