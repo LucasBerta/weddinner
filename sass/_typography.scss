@@ -13,7 +13,8 @@ body {
 
 .h2 {
   font-size: 4.5rem;
-  letter-spacing: 1.2rem;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
   line-height: 1.2;
 }
 
@@ -31,7 +32,8 @@ body {
 
 .h6 {
   font-size: 1.9rem;
-  letter-spacing: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
   line-height: 1.1;
 }
 
@@ -62,5 +64,28 @@ body {
   &:active {
     transform: translateY(-0.1rem);
     box-shadow: $box-shadow-light;
+  }
+}
+
+.btn {
+  &,
+  &:active {
+    padding: 1rem 1.5rem;
+
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: $color-secondary;
+    border: 1px solid $color-secondary;
+    border-radius: 1px;
+    cursor: pointer;
+    background-color: transparent;
+
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    color: $font-color-secondary;
+    background-color: $color-secondary;
   }
 }

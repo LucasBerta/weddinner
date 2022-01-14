@@ -1,0 +1,78 @@
+.services {
+  display: grid;
+  grid-template-rows: 35% 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0 $body-margin-horizontal;
+
+  background-color: #fff;
+
+  &__header {
+    grid-row: 1 / 1;
+    grid-column: 1 / -1;
+
+    margin-top: -5rem;
+    text-align: center;
+
+    &--subtitle {
+      margin-top: 3rem;
+    }
+  }
+
+  &__card {
+    grid-row: 2 / 3;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    &--title,
+    > .btn {
+      margin-bottom: 5rem;
+
+      z-index: 10;
+    }
+
+    &--title {
+      letter-spacing: 0.5rem;
+    }
+
+    &--engagement,
+    &--portrait,
+    &--family {
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.7;
+
+        z-index: 1;
+      }
+    }
+
+    &--engagement::before {
+      background-image: url(../assets/img/engagement-sessions.jpg);
+    }
+
+    &--portrait::before {
+      background-image: url(../assets/img/portrait-sessions.jpg);
+    }
+
+    &--family::before {
+      background-image: url(../assets/img/family-portraits.jpg);
+    }
+  }
+}
