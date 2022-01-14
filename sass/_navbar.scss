@@ -25,9 +25,11 @@
 
     transition: all 0.2s;
 
-    &:hover {
-      color: $font-color-secondary;
-      background-color: $color-secondary;
+    &--btn {
+      &:hover {
+        color: $font-color-secondary;
+        background-color: $color-secondary;
+      }
     }
   }
 }
