@@ -2,10 +2,11 @@
 $color-primary: #efece2;
 $color-secondary: #222;
 
-$font-color-primary: #333;
-$font-color-secondary: #eee;
+$font-color-primary: #111;
+$font-color-secondary: #fafafa;
 
-$box-shadow-light: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
+$box-shadow-light: 0 1.1rem 2rem rgba(0, 0, 0, 0.15);
+$box-shadow-mid: 0 1.3rem 3rem rgba(0, 0, 0, 0.3);
 
 // FONT VARIABLES
 $font-primary: "Spectral", serif;
@@ -21,4 +22,5 @@ $font-primary: "Spectral", serif;
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px
+  scroll-behavior: smooth;
 }
