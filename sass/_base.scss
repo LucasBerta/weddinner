@@ -1,0 +1,23 @@
+// COLOR VARIABLES
+$color-primary: #efece2;
+$color-secondary: #222;
+
+$font-color-1: #eee;
+
+$box-shadow-light: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
+
+// FONT VARIABLES
+$font-primary: "Spectral", serif;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px
+}

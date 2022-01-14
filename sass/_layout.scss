@@ -1,0 +1,16 @@
+$navbar-height: 6rem;
+
+.root-container {
+  display: grid;
+  grid-template-rows:
+    [navbar-start] $navbar-height
+    [navbar-end header-start] calc(100vh - #{$navbar-height})
+    [header-end gallery-start] 80vh
+    [gallery-end about-start] max-content
+    [about-end services-start] 100vh
+    [services-end reviews-start] max-content
+    [reviews-end contact-start] max-content
+    [contact-end footer-start] 8rem
+    [footer-end];
+  grid-template-columns: 1fr;
+}
