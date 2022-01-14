@@ -1,3 +1,25 @@
+@mixin animateHeader($delay: 0) {
+  animation-name: fade-in-slide-up;
+  animation-timing-function: cubic-bezier(0.1, 0.56, 0.57, 0.96);
+  animation-duration: 0.75s;
+  animation-delay: $delay + 0.25s;
+  -webkit-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -12,10 +34,21 @@
   background-position: center;
 
   &__title {
+    opacity: 0;
     margin-top: -10%;
+
+    @include animateHeader();
+  }
+
+  &__subtitle {
+    opacity: 0;
+    @include animateHeader(0.25s);
   }
 
   > .btn-link {
+    opacity: 0;
     margin-top: 5rem;
+
+    @include animateHeader(0.6s);
   }
 }
