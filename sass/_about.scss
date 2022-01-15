@@ -1,26 +1,27 @@
 .about {
   display: grid;
-  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   justify-items: center;
 
   padding: 5rem 0;
 
   &__title {
+    text-align: center;
     margin-top: 2rem;
-  }
-
-  &__subtitle {
-    margin-top: 3rem;
   }
 
   &__text {
     margin-top: 3rem;
-    font-size: 1.5rem;
+    text-align: center;
   }
 
   &__title,
   &__subtitle,
   &__text {
     grid-column: 2;
+  }
+
+  @include screen-sm {
+    grid-template-columns: 1fr 2.5fr 1fr;
   }
 }

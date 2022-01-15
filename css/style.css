@@ -14,7 +14,7 @@ body {
   font-family: "Spectral", serif;
   color: #111;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1.6; }
 
 .h1 {
@@ -33,25 +33,39 @@ body {
   letter-spacing: 1.1rem;
   line-height: 1.2; }
 
+.h4 {
+  font-size: 3rem;
+  letter-spacing: 1.1rem;
+  line-height: 1.2;
+  font-weight: 600;
+  font-family: "Dancing Script", cursive; }
+
 .h5 {
-  font-size: 2.2rem;
+  font-size: 2.7rem;
   letter-spacing: 0.9rem;
-  line-height: 1.2; }
+  line-height: 1.2;
+  font-weight: 300;
+  font-family: "Dancing Script", cursive; }
 
 .h6 {
-  font-size: 1.9rem;
+  font-size: 2.3rem;
   font-weight: 400;
   letter-spacing: 0.2rem;
-  line-height: 1.1; }
+  line-height: 1.1;
+  font-weight: 300;
+  font-family: "Dancing Script", cursive; }
 
 .root-container {
   display: grid;
-  grid-template-rows: [navbar-start] 6rem [navbar-end header-start] calc(100vh - 6rem) [header-end gallery-start] 1fr [gallery-end about-start] max-content [about-end services-start] 100vh [services-end reviews-start] 50vh [reviews-end contact-start] max-content [contact-end footer-start] max-content [footer-end];
+  grid-template-rows: [navbar-start] 6rem [navbar-end header-start] calc(100vh - 6rem) [header-end gallery-start] 1fr [gallery-end about-start] max-content [about-end services-start] minmax(max-content, 100vh) [services-end reviews-start] max-content [reviews-end contact-start] max-content [contact-end footer-start] max-content [footer-end];
   grid-template-columns: 1fr;
   overflow-x: hidden;
   background-color: #efece2; }
   .root-container > * {
     margin: 0 1.5rem; }
+
+*[class*="subtitle"] {
+  margin-top: 2rem; }
 
 .btn-link, .btn-link:link, .btn-link:active {
   padding: 1rem 1.5rem;
@@ -212,14 +226,19 @@ body {
     .navbar__item--btn:hover {
       color: #fafafa;
       background-color: #181818; }
+  @media only screen and (max-width: 43.75em) {
+    .navbar__item {
+      padding: 0.5rem; }
+      .navbar__item > .btn-link {
+        padding: 0.5rem; } }
 
 .gallery {
   display: grid;
-  grid-template-rows: repeat(9, 3.5vw);
   grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(9, 3.5vw);
   grid-row: gallery-start / gallery-end;
   gap: 1rem;
-  padding: 1rem 0; }
+  padding-top: 4rem; }
   .gallery__item-img {
     display: block;
     width: 100%;
@@ -233,95 +252,120 @@ body {
       transform: scale(1.15);
       box-shadow: 0 0 2.4rem 0.3rem #000;
       z-index: 10; }
-    .gallery__item--1 {
-      grid-row: 1 / span 4;
-      grid-column: 1 / span 2; }
-    .gallery__item--2 {
-      grid-row: 1 / span 2;
-      grid-column: 3 / span 2; }
-    .gallery__item--3 {
-      grid-row: 1 / span 6;
-      grid-column: 5 / span 3; }
-    .gallery__item--4 {
-      grid-row: 1 / span 4;
-      grid-column: 8 / span 2; }
-    .gallery__item--5 {
-      grid-row: 1 / span 3;
-      grid-column: 10 / -1; }
-    .gallery__item--6 {
-      grid-row: 3 / span 2;
-      grid-column: 3 / span 2; }
-    .gallery__item--7 {
-      grid-row: 5 / span 3;
-      grid-column: 1 / span 3; }
-    .gallery__item--8 {
-      grid-row: 5 / span 3;
-      grid-column: 4 / span 1; }
-    .gallery__item--9 {
-      grid-row: 5 / span 2;
-      grid-column: 8 / span 2; }
-    .gallery__item--10 {
-      grid-row: 4 / span 2;
-      grid-column: 11 / -1; }
-    .gallery__item--11 {
-      grid-row: 8 / -1;
-      grid-column: 1 / span 2; }
-    .gallery__item--12 {
-      grid-row: 8 / -1;
-      grid-column: 3 / span 2; }
-    .gallery__item--13 {
-      grid-row: 7 / -1;
-      grid-column: 5 / span 1; }
-    .gallery__item--14 {
-      grid-row: 7 / -1;
-      grid-column: 6 / span 3; }
-    .gallery__item--15 {
-      grid-row: 4 / span 3;
-      grid-column: 10 / span 1; }
-    .gallery__item--16 {
-      grid-row: 7 / span 2;
-      grid-column: 9 / span 2; }
-    .gallery__item--17 {
-      grid-row: 9 / span 1;
-      grid-column: 9 / span 2; }
-    .gallery__item--18 {
-      grid-row: 6 / -1;
-      grid-column: 11 / -1; }
+    @media only screen and (min-width: 43.75em) {
+      .gallery__item--1 {
+        grid-row: 1 / span 4;
+        grid-column: 1 / span 2; }
+      .gallery__item--2 {
+        grid-row: 1 / span 2;
+        grid-column: 3 / span 2; }
+      .gallery__item--3 {
+        grid-row: 1 / span 6;
+        grid-column: 5 / span 3; }
+      .gallery__item--4 {
+        grid-row: 1 / span 4;
+        grid-column: 8 / span 2; }
+      .gallery__item--5 {
+        grid-row: 1 / span 3;
+        grid-column: 10 / -1; }
+      .gallery__item--6 {
+        grid-row: 3 / span 2;
+        grid-column: 3 / span 2; }
+      .gallery__item--7 {
+        grid-row: 5 / span 3;
+        grid-column: 1 / span 3; }
+      .gallery__item--8 {
+        grid-row: 5 / span 3;
+        grid-column: 4 / span 1; }
+      .gallery__item--9 {
+        grid-row: 5 / span 2;
+        grid-column: 8 / span 2; }
+      .gallery__item--10 {
+        grid-row: 4 / span 2;
+        grid-column: 11 / -1; }
+      .gallery__item--11 {
+        grid-row: 8 / -1;
+        grid-column: 1 / span 2; }
+      .gallery__item--12 {
+        grid-row: 8 / -1;
+        grid-column: 3 / span 2; }
+      .gallery__item--13 {
+        grid-row: 7 / -1;
+        grid-column: 5 / span 1; }
+      .gallery__item--14 {
+        grid-row: 7 / -1;
+        grid-column: 6 / span 3; }
+      .gallery__item--15 {
+        grid-row: 4 / span 3;
+        grid-column: 10 / span 1; }
+      .gallery__item--16 {
+        grid-row: 7 / span 2;
+        grid-column: 9 / span 2; }
+      .gallery__item--17 {
+        grid-row: 9 / span 1;
+        grid-column: 9 / span 2; }
+      .gallery__item--18 {
+        grid-row: 6 / -1;
+        grid-column: 11 / -1; } }
+  @media only screen and (max-width: 43.75em) {
+    .gallery {
+      grid-template-rows: none;
+      grid-auto-rows: 11vh;
+      grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+      flex-direction: column;
+      justify-content: center;
+      justify-self: center;
+      width: calc(100% - 1.5rem - 1.5rem); }
+      .gallery__item--tall {
+        grid-row: span 2 / auto; }
+      .gallery__item--wide {
+        grid-column: span 2 / auto; } }
   .gallery:hover > .gallery__item:not(:hover) {
-    filter: blur(1px) brightness(0.75); }
+    filter: blur(1px) brightness(0.8); }
+  @media only screen and (hover: none) {
+    .gallery:hover > .gallery__item:not(:hover) {
+      filter: none; }
+    .gallery__item:hover {
+      transform: none;
+      box-shadow: none;
+      z-index: 1; } }
 
 .about {
   display: grid;
-  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   justify-items: center;
   padding: 5rem 0; }
   .about__title {
+    text-align: center;
     margin-top: 2rem; }
-  .about__subtitle {
-    margin-top: 3rem; }
   .about__text {
     margin-top: 3rem;
-    font-size: 1.5rem; }
+    text-align: center; }
   .about__title, .about__subtitle, .about__text {
     grid-column: 2; }
+  @media only screen and (max-width: 43.75em) {
+    .about {
+      grid-template-columns: 1fr 2.5fr 1fr; } }
 
 .services {
   display: grid;
-  grid-template-rows: 35% 1fr;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 20rem 1fr;
+  grid-template-columns: repeat(3, minmax(10rem, 1fr));
+  justify-items: center;
   gap: 1rem;
   justify-items: center;
   align-items: center;
   margin: 0;
-  padding: 0 1.5rem;
+  padding: 2rem 1.5rem;
   background-color: #fff; }
   .services__header {
     grid-row: 1 / 1;
     grid-column: 1 / -1;
+    align-self: center;
     margin-top: -5rem;
     text-align: center; }
-    .services__header--subtitle {
-      margin-top: 3rem; }
+    .services__header--title {
+      margin-top: 2rem; }
   .services__card {
     grid-row: 2 / 3;
     display: flex;
@@ -330,7 +374,10 @@ body {
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    min-height: 40rem;
+    padding: 2rem;
+    text-align: center; }
     .services__card--title,
     .services__card > .btn {
       margin-bottom: 5rem;
@@ -347,7 +394,7 @@ body {
       left: 0;
       background-size: cover;
       background-position: center;
-      opacity: 0.7;
+      opacity: 0.6;
       z-index: 1; }
     .services__card--engagement::before {
       background-image: url(../assets/img/engagement-sessions.jpg); }
@@ -355,6 +402,12 @@ body {
       background-image: url(../assets/img/portrait-sessions.jpg); }
     .services__card--family::before {
       background-image: url(../assets/img/family-portraits.jpg); }
+  @media only screen and (max-width: 75em) {
+    .services__card {
+      justify-content: space-evenly; }
+      .services__card--title,
+      .services__card > .btn {
+        margin: 0; } }
 
 .reviews {
   display: flex;
@@ -364,14 +417,23 @@ body {
   .reviews__card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     padding: 3rem;
     font-size: 1.5rem; }
     .reviews__card--quote {
       width: 6.4rem;
-      height: 6.4rem; }
+      height: 6.4rem;
+      margin-bottom: 1rem; }
+    .reviews__card--review {
+      text-align: center;
+      margin-bottom: auto; }
+    .reviews__card--author {
+      margin-top: 1rem;
+      font-weight: 100;
+      font-family: "Dancing Script", cursive;
+      font-size: 1.6rem; }
 
 .contact {
   display: grid;
@@ -386,7 +448,7 @@ body {
       margin-top: 2rem; }
   .contact__form {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
     padding: 0 15rem;
     width: 100%; }
@@ -400,6 +462,19 @@ body {
       background-color: #111;
       color: #fafafa;
       grid-column: 1 / -1; }
+  @media only screen and (max-width: 93.75em) {
+    .contact__form {
+      padding: 0 5rem; } }
+  @media only screen and (max-width: 75em) {
+    .contact__form {
+      grid-template-columns: 1fr;
+      padding: 0 3rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .contact__form {
+      padding: 0 2rem; } }
+  @media only screen and (max-width: 43.75em) {
+    .contact__form {
+      padding: 0 1rem; } }
 
 .footer {
   display: flex;

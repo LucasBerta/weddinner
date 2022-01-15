@@ -18,6 +18,48 @@ $default-transition-duration: 0.2s;
 $font-primary: "Spectral", serif;
 $font-secondary: "Dancing Script", cursive;
 
+// BREAKPOINTS
+$screen-sm: 43.75em; // 700px
+$screen-md: 56.25em; // 900px
+$screen-lg: 75em; // 1200px
+$screen-xl: 93.75em; // 1500px
+
+@mixin screen-touch {
+  @media only screen and (hover: none) {
+    @content;
+  }
+}
+
+@mixin screen-sm {
+  @media only screen and (max-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media only screen and (max-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  @media only screen and (max-width: $screen-lg) {
+    @content;
+  }
+}
+
+@mixin screen-xl {
+  @media only screen and (max-width: $screen-xl) {
+    @content;
+  }
+}
+
+@mixin screen-min-sm {
+  @media only screen and (min-width: $screen-sm) {
+    @content;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -30,4 +72,16 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px
   scroll-behavior: smooth;
+
+  // @include screen-lg {
+  //   font-size: 56.25%; // 1rem = 9px; 8/16 = 50%
+  // }
+
+  // @include screen-md {
+  //   font-size: 50%; // 1rem = 8px; 8/16 = 50%
+  // }
+
+  // @include screen-sm {
+  //   font-size: 43.75%; // 1rem = 7px; 7/16 = 50%
+  // }
 }

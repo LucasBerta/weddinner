@@ -15,7 +15,7 @@
 
   &__form {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
     padding: 0 15rem;
     width: 100%;
@@ -37,6 +37,31 @@
       background-color: $font-color-primary;
       color: $font-color-secondary;
       grid-column: 1 / -1;
+    }
+  }
+
+  @include screen-xl {
+    &__form {
+      padding: 0 5rem;
+    }
+  }
+
+  @include screen-lg {
+    &__form {
+      grid-template-columns: 1fr;
+      padding: 0 3rem;
+    }
+  }
+
+  @include screen-md {
+    &__form {
+      padding: 0 2rem;
+    }
+  }
+
+  @include screen-sm {
+    &__form {
+      padding: 0 1rem;
     }
   }
 }

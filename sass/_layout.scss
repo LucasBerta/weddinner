@@ -8,7 +8,7 @@ $body-margin-horizontal: 1.5rem;
     [navbar-end header-start] calc(100vh - #{$navbar-height})
     [header-end gallery-start] 1fr
     [gallery-end about-start] max-content
-    [about-end services-start] 100vh
+    [about-end services-start] minmax(max-content, 100vh)
     [services-end reviews-start] max-content
     [reviews-end contact-start] max-content
     [contact-end footer-start] max-content
@@ -21,4 +21,8 @@ $body-margin-horizontal: 1.5rem;
   > * {
     margin: 0 $body-margin-horizontal;
   }
+}
+
+*[class*="subtitle"] {
+  margin-top: 2rem;
 }
